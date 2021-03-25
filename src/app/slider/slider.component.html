@@ -1,0 +1,42 @@
+<div id="carousel" class="carousel">
+  <button class="prev" (click)="textSliderPrev()">⇦</button>
+  <div class="gallery">
+    <ul class="images" #list>
+      <li class="oneUser" *ngFor="let i of users">
+        {{ i.name }}
+      </li>
+    </ul>
+  </div>
+  <button class="next" (click)="textSliderNext()">⇨</button>
+</div>
+
+<br />
+
+<div id="carousel" class="carousel">
+  <button class="prev" (click)="imageSliderPrev()">⇦</button>
+  <div class="gallery">
+    <ul class="images" #listIm>
+      <li class="oneUser" *ngFor="let image of images">
+        <img src="{{ image.scr }}" />
+      </li>
+    </ul>
+  </div>
+  <button class="next" (click)="imageSliderNext()">⇨</button>
+</div>
+
+<br />
+
+<div id="carousel" class="carousel">
+  <button class="prev" (click)="combSliderPrev()">⇦</button>
+  <div class="gallery">
+    <ul class="images" #listEl>
+      <li class="oneUser" *ngFor="let i of elements">
+        <div class="combDiv">
+          <img src="{{ i.scr }}" />
+          {{ i.name }}
+        </div>
+      </li>
+    </ul>
+  </div>
+  <button class="next" (click)="combSliderNext()">⇨</button>
+</div>
