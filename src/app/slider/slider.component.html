@@ -1,4 +1,4 @@
-<div id="carousel" class="carousel">
+<div id="carousel" class="carousel" (dragover)="dragover(0)">
   <button class="prev" (click)="textSliderPrev()">⇦</button>
   <div class="gallery">
     <ul class="images" #list>
@@ -12,7 +12,7 @@
 
 <br />
 
-<div id="carousel" class="carousel">
+<div id="carousel" class="carousel" (dragover)="dragover(1)">
   <button class="prev" (click)="imageSliderPrev()">⇦</button>
   <div class="gallery">
     <ul class="images" #listIm>
@@ -26,8 +26,8 @@
 
 <br />
 
-<div id="carousel" class="carousel">
-  <button class="prev" (click)="combSliderPrev()">⇦</button>
+<div id="carousel" class="carousel" (dragover)="dragover(2)">
+  <button class="prevM" (click)="combSliderPrev()">⇦</button>
   <div class="gallery">
     <ul class="images" #listEl>
       <li class="oneUser" *ngFor="let i of elements">
@@ -38,5 +38,5 @@
       </li>
     </ul>
   </div>
-  <button class="next" (click)="combSliderNext()">⇨</button>
+  <button class="nextM" (click)="combSliderNext()">⇨</button>
 </div>

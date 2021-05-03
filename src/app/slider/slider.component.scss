@@ -4,7 +4,7 @@
   margin-bottom: 1rem;
   width: 130px;
   float: left;
-  margin-right: 10px;
+  margin-right: 10px; 
   line-height: 120px;
 }
 
@@ -24,12 +24,19 @@ body {
   border: 1px solid #CCC;
   border-radius: 15px;
   background: #eee;
+  display: flex;
 }
 
 .carousel img {
   width: 130px;
   height: 130px;
   display: block;
+  // -webkit-touch-callout: none; 
+  // -webkit-user-select: none;   
+  // -khtml-user-select: none;    
+  // -moz-user-select: none;
+  // -ms-user-select: none; 
+  // user-select: none; 
 }
 
 .arrow {
@@ -56,10 +63,26 @@ body {
 
 .prev {
   left: 7px;
+  height: 20px;
+  margin-top: 57px;
 }
 
 .next {
   right: 7px;
+  height: 20px;
+  margin-top: 57px;
+}
+
+.prevM{
+  left: 7px;
+  height: 20px;
+  margin-top: 90px;
+}
+
+.nextM{
+  right: 7px;
+  height: 20px;
+  margin-top: 90px;
 }
 
 .gallery {
