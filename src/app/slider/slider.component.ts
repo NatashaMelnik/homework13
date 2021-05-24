@@ -40,17 +40,17 @@ export class SliderComponent implements OnInit {
   ngOnInit(): void {}
 
   constructor(
-    _useList: SliderDatasService,
-    _useImList: SliderDatasService,
-    _useCmList: SliderDatasService
+    useList: SliderDatasService,
+    useImList: SliderDatasService,
+    useCmList: SliderDatasService
   ) {
-    this.listName = _useList.getListNames();
+    this.listName = useList.getListNames();
     this.users = this.listName;
 
-    this.listImages = _useImList.getListImages();
+    this.listImages = useImList.getListImages();
     this.images = this.listImages;
 
-    this.listElements = _useCmList.getListCombi();
+    this.listElements = useCmList.getListCombi();
     this.elements = this.listElements;
   }
 
@@ -93,7 +93,7 @@ export class SliderComponent implements OnInit {
     list.nativeElement.style.marginLeft = option.position + 'px';
   }
 
-  dragover(num: number) {
+  dragover(num: number): void {
     if (num === 0) {
       this.textSliderNext();
     }

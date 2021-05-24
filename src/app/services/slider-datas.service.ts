@@ -55,15 +55,15 @@ export class SliderDatasService {
     { scr: 'https://picsum.photos/200?random=14', name: 'Salat13' },
   ];
 
-  public getListNames() {
+  public getListNames(): Array<object> {
     return this.listName;
   }
 
-  public getListImages() {
+  public getListImages(): Array<object> {
     return this.listImages;
   }
 
-  public getListCombi() {
+  public getListCombi(): Array<object> {
     return this.listCombi;
   }
 
