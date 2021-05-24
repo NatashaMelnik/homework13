@@ -93,66 +93,17 @@ export class SliderComponent implements OnInit {
     list.nativeElement.style.marginLeft = option.position + 'px';
   }
 
-  // ______swipe______
-
-  slider_1 = {
-    cond1_1: false,
-    cond2_1: false,
-    mousedownFired_1: false,
-    index_1: 0,
-    xDown_1: 0,
-  };
-
-  slider_2 = {
-    cond1_2: false,
-    cond2_2: false,
-    mousedownFired_2: false,
-    index_2: 0,
-    xDown_2: 0,
-  };
-
-  slider_3 = {
-    cond1_3: false,
-    cond2_3: false,
-    mousedownFired_3: false,
-    index_3: 0,
-    xDown_3: 0,
-  };
-
   dragover(num: number) {
+    if (num === 0) {
+      this.textSliderNext();
+    }
+    if (num === 1) {
+      this.imageSliderNext();
+    }
+    if (num === 2) {
+      this.combSliderNext();
+    }
     console.log('dragover');
-    this.textSliderNext();
-    // if (num === 0) {this.textSliderNext()};
-    // if (num === 1) {this.imageSliderNext()};
-    // if (num === 2) {this.combSliderNext()};
   }
 
-  // $('.carousel').mousedown(function () {
-  //   cond1 = true;
-  //   xDown = event.clientX;
-  //   mousedownFired = true;
-  // });
-
-  // $('.carousel').mousemove(function () {
-  //   this.cond2 = true;
-  // });
-
-  // $('.carousel').mouseup(function () {            // for swipe
-  //   event.stopPropagation();
-  //   var xUp = event.clientX;
-  //   if (this.cond1 && this.cond2){
-  //     swipe(xUp);
-  //   }
-  //   cond1 = false;
-  //   cond2 = false;
-  // });
-
-  // function swipe(xUp) {
-  //   if (xDown > xUp) {
-  //     rightClick();
-  //   }
-  //   else {
-  //     leftClick();
-  //   }
-  // }
 }

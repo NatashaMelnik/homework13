@@ -1,8 +1,8 @@
-<div id="carousel" class="carousel" (dragover)="dragover(0)">
+<div id="carousel" class="carousel">
   <button class="prev" (click)="textSliderPrev()">⇦</button>
   <div class="gallery">
     <ul class="images" #list>
-      <li class="oneUser" *ngFor="let i of users">
+      <li class="oneUser" *ngFor="let i of users" (dragover)="dragover(0)">
         {{ i.name }}
       </li>
     </ul>
@@ -12,11 +12,11 @@
 
 <br />
 
-<div id="carousel" class="carousel" (dragover)="dragover(1)">
+<div id="carousel" class="carousel">
   <button class="prev" (click)="imageSliderPrev()">⇦</button>
   <div class="gallery">
     <ul class="images" #listIm>
-      <li class="oneUser" *ngFor="let image of images">
+      <li class="oneUser" *ngFor="let image of images" (dragover)="dragover(1)">
         <img src="{{ image.scr }}" />
       </li>
     </ul>
@@ -26,12 +26,12 @@
 
 <br />
 
-<div id="carousel" class="carousel" (dragover)="dragover(2)">
+<div id="carousel" class="carousel">
   <button class="prevM" (click)="combSliderPrev()">⇦</button>
   <div class="gallery">
     <ul class="images" #listEl>
       <li class="oneUser" *ngFor="let i of elements">
-        <div class="combDiv">
+        <div class="combDiv" (dragover)="dragover(2)">
           <img src="{{ i.scr }}" />
           {{ i.name }}
         </div>
